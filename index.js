@@ -13,11 +13,8 @@ getter.done(function(responce){
   var a = responce.data.children;
   for (var i = 0; i < a.length; i++) {
     console.log(a[i].data.display_name);  //test
-    $('#tabl').append("<tr><td>"+a[i].data.display_name+"</td></tr>")
-  }
-  for (var i = 0; i < a.length; i++) {
-    console.log(a[i].data.header_img);
-    $('#tabl').append("<tr><td><image src='"+a[i].data.header_img"'/></td></tr>")
+    $('#tabl').append("<tr><td>"+a[i].data.display_name+"</td><td><img id='hImg' src='"+a[i].data.header_img+"'</td></tr>")
+    
   }
 
 });
